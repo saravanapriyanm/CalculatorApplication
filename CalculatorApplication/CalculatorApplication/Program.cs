@@ -80,6 +80,7 @@ namespace CalculatorApp
                             }
                             OperatorStackPop();
                             break;
+
                         case '0':
                         case '1':
                         case '2':
@@ -150,7 +151,7 @@ namespace CalculatorApp
         public static bool CheckValidInputOrNot(string inputExpression)
         {
 
-            Regex rgx = new Regex(@"^[\d\(\+\-. ]+[\d\+\-\*\/\(\). ]+[\d\) ]+$");
+            Regex rgx = new Regex(@"^[\d\(\+\-. ]+[\d\+\-\*\/\(\). ]+[\d\) ]+$");  // Regex : Exp doesn't start with ) , * , / and not Contain Alphabets.
 
             if (rgx.IsMatch(inputExpression))
             {
